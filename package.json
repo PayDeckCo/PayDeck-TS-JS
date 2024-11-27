@@ -1,7 +1,30 @@
 {
   "name": "paydeck-js",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
   "author": "yinkakun <yinkakun@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@changesets/cli": "^2.27.10",
+    "prettier": "^3.4.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
+  },
+  "scripts": {
+    "lint": "tsc",
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run ci",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "local-release": "changeset version && changeset publish",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "ci": "npm run lint && npm run build && npm run test && npm run check-format && npm run check-exports"
+  }
 }

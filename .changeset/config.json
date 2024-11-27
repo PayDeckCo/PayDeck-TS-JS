@@ -1,0 +1,9 @@
+{
+  "ignore": [],
+  "commit": true,
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "changelog": "@changesets/cli/changelog",
+  "$schema": "https://unpkg.com/@changesets/config@3.0.4/schema.json"
+}

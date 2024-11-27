@@ -33,3 +33,10 @@ node_modules/
 
 # Mac OS X Finder directory files
 .DS_Store
+
+# Build files
+dist
+
+# Lock files
+package-lock.json
+yarn.lock

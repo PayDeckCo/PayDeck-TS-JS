@@ -24,7 +24,6 @@
     /* If building for a library: */
     "declaration": true,
 
-    /* Prevent DOM globals from being included in the global scope: */
-    "lib": ["es2022"]
+    "lib": ["es2022", "dom"]
   }
 }
